@@ -1,0 +1,153 @@
+.admin-orders-page {
+    padding: 40px;
+    background: #f4f6fb;
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.admin-orders-page h2 {
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+/* ORDER CARD */
+.admin-order-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    animation: fadeUp 0.5s ease;
+}
+
+/* HEADER */
+.admin-order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.admin-order-header h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.admin-order-header p {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* STATUS BADGE */
+.order-status {
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.order-status.Placed {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.order-status.Shipped {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.order-status.Delivered {
+    background: #d4edda;
+    color: #155724;
+}
+
+.order-status.Cancelled {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* SECTIONS */
+.admin-section {
+    margin-top: 20px;
+}
+
+.admin-section h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.admin-section p {
+    margin: 4px 0;
+    color: #555;
+}
+
+/* PRODUCTS */
+.admin-product-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.admin-product-row:last-child {
+    border-bottom: none;
+}
+
+.admin-product-row img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-name {
+    font-weight: 600;
+}
+
+/* FOOTER */
+.admin-order-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-order-footer select {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background: #f9f9f9;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .admin-order-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .admin-order-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

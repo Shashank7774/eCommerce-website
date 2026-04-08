@@ -1,0 +1,218 @@
+/* ===== CART PAGE ===== */
+.cart-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fb, #eef1f8);
+    padding: 40px 20px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== CART CONTAINER ===== */
+.cart-container {
+    max-width: 950px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== CART TITLE ===== */
+.cart-container h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0f0f0;
+    color: #222;
+}
+
+/* ===== CART ITEM ===== */
+.cart-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* ===== PRODUCT INFO ===== */
+.cart-product h4 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+}
+
+.cart-product p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* ===== QUANTITY INPUT ===== */
+.cart-qty input {
+    width: 70px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-qty input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+/* ===== PRICE ===== */
+.cart-price {
+    font-weight: bold;
+    font-size: 16px;
+    color: #111;
+    text-align: right;
+}
+
+/* ===== TOTAL SECTION ===== */
+.cart-summary {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafbff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.cart-summary h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #111;
+}
+
+/* ===== PLACE ORDER BUTTON ===== */
+.place-order-btn {
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #fb641b, #ff7b2c);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.place-order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(251, 100, 27, 0.4);
+}
+
+/* ===== EMPTY CART ===== */
+.empty-cart {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 18px;
+    color: #777;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+    .cart-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .cart-price {
+        text-align: left;
+    }
+
+    .cart-summary {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+.cart-product {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* PRODUCT IMAGE */
+.cart-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    background: #fafafa;
+}
+
+/* PRODUCT INFO */
+.cart-info h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.cart-info p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+.remove-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #e53935;
+}
+.order-success {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.success-box {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    animation: successPop 0.6s ease;
+}
+
+@keyframes successPop {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-check {
+    font-size: 50px;
+    color: #4caf50;
+    animation: checkBounce 0.6s ease;
+}
+
+@keyframes checkBounce {
+    50% {
+        transform: scale(1.2);
+    }
+}

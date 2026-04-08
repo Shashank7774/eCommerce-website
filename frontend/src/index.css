@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #eaeded;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  background: #f0c14b;
+  border: 1px solid #a88734;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background: #ddb347;
+}
+
