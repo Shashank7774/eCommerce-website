@@ -23,7 +23,7 @@ export default function Admin() {
 
   const [stats, setStats] = useState(null);
   const fetchStats = async () => {
-  const res = await axios.get("http://localhost:5000/api/admin/stats");
+  const res = await axios.get("https://raja-fashion-clothing.onrender.com/api/admin/stats");
   setStats(res.data);
 };
 
@@ -39,7 +39,7 @@ export default function Admin() {
   }, []);
 
   const fetchProducts = async () => {
-    const res = await axios.get("http://localhost:5000/api/products");
+    const res = await axios.get("https://raja-fashion-clothing.onrender.com/api/products");
     setProducts(res.data);
   };
 
@@ -57,7 +57,7 @@ export default function Admin() {
     }
 
     await axios.post(
-      "http://localhost:5000/api/products/add",
+      "https://raja-fashion-clothing.onrender.com/api/products/add",
       formData,
       {
         headers: {
@@ -74,7 +74,7 @@ export default function Admin() {
   /* DELETE PRODUCT */
   const deleteProduct = async (id) => {
     await axios.delete(
-      `http://localhost:5000/api/products/delete/${id}`
+      `https://raja-fashion-clothing.onrender.com/api/products/delete/${id}`
     );
     setProducts(products.filter(p => p._id !== id));
   };

@@ -19,14 +19,14 @@ export default function AdminOrders() {
 
   const fetchOrders = async () => {
     const res = await axios.get(
-      "http://localhost:5000/api/orders/admin/all"
+      "https://raja-fashion-clothing.onrender.com/api/orders/admin/all"
     );
     setOrders(res.data);
   };
 
   const updateStatus = async (orderId, newStatus) => {
     await axios.put(
-      `http://localhost:5000/api/orders/update-status/${orderId}`,
+      `https://raja-fashion-clothing.onrender.com/api/orders/update-status/${orderId}`,
       { status: newStatus }
     );
 

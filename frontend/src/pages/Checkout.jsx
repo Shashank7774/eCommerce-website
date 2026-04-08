@@ -31,7 +31,7 @@ export default function Checkout() {
       return;
     }
 
-    await axios.post("http://localhost:5000/api/orders/place", {
+    await axios.post("https://raja-fashion-clothing.onrender.com/api/orders/place", {
       userId: user.id,
       cart,
       deliveryDetails: {

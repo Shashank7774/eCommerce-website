@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   const subscribe = async () => {
-  await fetch("http://localhost:5000/api/newsletter/subscribe", {
+  await fetch("https://raja-fashion-clothing.onrender.com/api/newsletter/subscribe", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email })

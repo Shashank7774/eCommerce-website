@@ -11,12 +11,12 @@ export default function ForgotPassword() {
   const [password, setPassword] = useState("");
 
   const sendOtp = async () => {
-    await axios.post("http://localhost:5000/api/auth/send-otp", { email });
+    await axios.post("https://raja-fashion-clothing.onrender.com/api/auth/send-otp", { email });
     setStep(2);
   };
 
   const verifyOtp = async () => {
-    await axios.post("http://localhost:5000/api/auth/verify-otp", {
+    await axios.post("https://raja-fashion-clothing.onrender.com/api/auth/verify-otp", {
       email,
       otp,
       newPassword: password

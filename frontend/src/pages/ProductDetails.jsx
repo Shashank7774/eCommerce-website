@@ -18,7 +18,7 @@ export default function ProductDetails() {
 
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/products")
+    axios.get("https://raja-fashion-clothing.onrender.com/api/products")
       .then(res => {
         const p = res.data.find(x => x._id === id);
         setProduct(p);
@@ -40,7 +40,7 @@ export default function ProductDetails() {
   };
   const submitReview = async () => {
   await axios.post(
-    `http://localhost:5000/api/products/review/${product._id}`,
+    `https://raja-fashion-clothing.onrender.com/api/products/review/${product._id}`,
     {
       user: "Anonymous",
       rating,

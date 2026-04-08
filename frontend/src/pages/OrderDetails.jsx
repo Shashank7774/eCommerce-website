@@ -8,7 +8,7 @@ export default function OrderDetails() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/orders/details/${id}`)
+      .get(`https://raja-fashion-clothing.onrender.com/api/orders/details/${id}`)
       .then(res => setOrder(res.data));
   }, []);
 

@@ -4,7 +4,7 @@ export default function AdminNewsletter() {
   const [emails, setEmails] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/newsletter")
+    fetch("https://raja-fashion-clothing.onrender.com/api/newsletter")
       .then(res => res.json())
       .then(setEmails);
   }, []);

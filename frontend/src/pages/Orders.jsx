@@ -6,14 +6,14 @@ export default function Orders() {
   const [openId, setOpenId] = useState(null);
 
   const cancelOrder = async (orderId) => {
-  await axios.put(`http://localhost:5000/api/orders/cancel/${orderId}`);
+  await axios.put(`https://raja-fashion-clothing.onrender.com/api/orders/cancel/${orderId}`);
   setOrders(orders.map(o =>
     o._id === orderId ? { ...o, status: "Cancelled" } : o
   ));
 };
 
 const returnOrder = async (orderId) => {
-  await axios.put(`http://localhost:5000/api/orders/return/${orderId}`);
+  await axios.put(`https://raja-fashion-clothing.onrender.com/api/orders/return/${orderId}`);
   setOrders(orders.map(o =>
     o._id === orderId ? { ...o, status: "Returned" } : o
   ));
@@ -28,7 +28,7 @@ const returnOrder = async (orderId) => {
     if (!user?.id) return;
 
     axios
-      .get(`http://localhost:5000/api/orders/user/${user.id}`)
+      .get(`https://raja-fashion-clothing.onrender.com/api/orders/user/${user.id}`)
       .then(res => setOrders(res.data))
       .finally(() => setLoading(false))
       .catch(err => console.error(err));
