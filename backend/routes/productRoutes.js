@@ -13,7 +13,8 @@ const upload = multer({ storage });
 
 // ADD PRODUCT (ADMIN)
 router.post("/add", upload.array("images", 5), async (req, res) => {
-  const images = req.files ? req.files.map(f => `http://localhost:5000/uploads/${f.filename}`) :[];
+  const BASE_URL =process.env.BASE_URL || "http://localhost:5000";
+  const images = req.files ? req.files.map(f => `${BASE_URL}/uploads/${f.filename}`) :[];
   const product = new Product({
     name: req.body.name,
     // description: req.body.description,
