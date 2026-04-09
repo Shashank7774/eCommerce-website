@@ -6,7 +6,7 @@ require("dotenv").config();
 
 const app = express();
 app.use(express.json());
-app.use(cors({origin: "*"}));
+app.use(cors({origin: "https://raja-fashion.vercel.app", credentials: true}));
 app.use("/uploads", express.static("uploads"));
 
 mongoose.connect(process.env.MONGO_URI)
